@@ -28,7 +28,7 @@ Task("Test")
         CoverletOutputName = $"results-{DateTime.UtcNow:dd-MM-yyyy-HH-mm-ss-FFF}"
     };
 
-    DotNetCoreTest("./test/Stubble.Core.Tests/Stubble.Core.Tests.csproj", testSetting, coveletSettings);
+    DotNetCoreTest("./test/Stubble.Core.Tests/Stubble.Core.Tests.csproj", testSettings, coveletSettings);
 }
 ```
 
@@ -51,7 +51,7 @@ Task("Test")
         OutputNameTransformer = (fileName, directory) => $@"{directory}\{fileName}-HelloWorld"
     };
 
-    DotNetCoreTest("./test/Stubble.Core.Tests/Stubble.Core.Tests.csproj", testSetting, coveletSettings);
+    DotNetCoreTest("./test/Stubble.Core.Tests/Stubble.Core.Tests.csproj", testSettings, coveletSettings);
 }
 ```
 
